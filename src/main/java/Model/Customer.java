@@ -5,6 +5,10 @@ public class Customer {
     public String name;
     public String petname;
 
+    public Customer(){
+
+    }
+
     public Customer(int id, String name, String petname) {
         this.id = id;
         this.name = name;

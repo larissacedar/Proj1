@@ -7,6 +7,10 @@ public class Order {
     public int yearorder;
     public int customerID;
 
+    public Order(){
+
+    }
+
     public Order(int order_id, String protein, int price, int yearorder, int customerID) {
         this.order_id = order_id;
         this.protein = protein;
@@ -35,7 +39,7 @@ public class Order {
         this.protein = protein;
     }
 
-    public float getPrice() {
+    public int getPrice() {
         return price;
     }
 
