@@ -29,7 +29,6 @@ public class CustomerRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-
         }
         return -1;
     }
@@ -77,5 +76,21 @@ public class CustomerRepository {
         }
         return allCustomers;
     }
+    public Customer getCustomerFromId(int id){
+        try {
+            PreparedStatement statement = conn.prepareStatement("select * from Customer where id = ?");
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                return new Customer(rs.getInt("id"), rs.getString("name"),
+                        rs.getString("petname"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return null;
+    }
 }
+
 

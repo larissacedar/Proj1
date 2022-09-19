@@ -70,7 +70,7 @@ public class OrderRepository {
         try {
             PreparedStatement statement = conn.prepareStatement("insert into orderdb (order_id, protein, price, yearorder, customerID)"
                     + "values(?, ?, ?, ?, ?)");
-            statement.setInt(1, r.getId());
+            statement.setInt(1, r.getOrder_id());
             statement.setString(2, r.getProtein());
             statement.setFloat(3, r.getPrice());
             statement.setInt(4, r.getYearorder());

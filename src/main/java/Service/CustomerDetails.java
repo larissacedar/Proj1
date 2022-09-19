@@ -2,7 +2,6 @@ package Service;
 
 import DAO.CustomerRepository;
 import Model.Customer;
-import Model.Order;
 
 import java.util.List;
 
@@ -17,10 +16,12 @@ public class CustomerDetails {
     public int getCustomerIdFromName(String name) {
         return cr.getCustomerIdFromName(name);
     }
-    public List<Customer>  getAllCustomers() {
+
+    public List<Customer> getAllCustomers() {
         return cr.getAllCustomers();
     }
-    public void addCustomer(int id, String name, String petname) {
+
+    public Customer addCustomer(int id, String name, String petname) {
         Customer existingCustomer = cr.getOrderByID(id);
         //Customer newCustomer = true;
         if (existingCustomer == null) {
@@ -28,5 +29,9 @@ public class CustomerDetails {
             cr.addCustomer(newCustomer);
         } else {
         }
+        return null;
     }
-}
+        public Customer getCustomerFromId(int id){
+            return cr.getCustomerFromId(id);
+        }
+    }

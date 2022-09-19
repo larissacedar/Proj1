@@ -23,12 +23,12 @@ public class Order {
     public String toString() {
         return "order_id: " + order_id + ", type of food: " + protein + ", price: " + price + ", yearorder: " + yearorder + ", customerID: " + customerID + "\n";
     }
-    public int getId() {
+    public int getOrder_id() {
         return order_id;
     }
 
-    public void setId(int id) {
-        this.order_id = id;
+    public void setOrder_id(int order_id) {
+        this.order_id = order_id;
     }
 
     public String getProtein() {
